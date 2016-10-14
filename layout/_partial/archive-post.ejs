@@ -6,7 +6,7 @@
     </header>
 
     <div class="article-entry" itemprop="articleBody">
-      <% if (post.excerpt && index){ %>
+      <% if (post.excerpt && is_archive()){ %>
         <%- post.excerpt %>
         <% if (theme.excerpt_link){ %>
           <p class="article-more-link">

@@ -13,6 +13,9 @@ default_cover_detail: "http://placehold.it/1300x500"
 # Show Dates for posts and pages
 show_dates: true
 
+# Style of home page 'blog' or 'thumbs'
+style: blog
+
 # About page for call to action on home page
 about_page: page
 

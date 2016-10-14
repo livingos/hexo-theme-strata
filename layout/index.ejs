@@ -17,14 +17,20 @@
     </ul>
   </section>
 
-  <!-- Two -->
-  <section id="two">
-    <h2>Recent Work</h2>
-    <div class="row">
-      <% page.posts.forEach(function(item, index){ %>
-          <%- partial('_partial/article-index', {item: item, index: index}) %>
-      <% }); %>
-    </div>
+  <% if( theme.style == 'blog') { %>
+    <%- partial('_partial/archive', {pagination: config.archive}) %>
+  <% } else { %>
+
+    <!-- Two -->
+    <section id="two">
+      <h2>Recent Work</h2>
+      <div class="row">
+        <% page.posts.forEach(function(item, index){ %>
+            <%- partial('_partial/article-index', {item: item, index: index}) %>
+        <% }); %>
+      </div>
+
+  <% } %>
 
     <%- partial('_partial/pagination') %>
 
