@@ -1,0 +1,8 @@
+<h1><%- item.title || theme.default_post_title || "Untitled" %></h1>
+
+<% if(item.cover_detail || theme.default_cover_detail) { %>
+<div class="image main"><img src="<%- item.cover_detail || theme.default_cover_detail %>" alt="" /></div>
+<% } %>
+
+<!-- Content -->
+<%- item.content %>

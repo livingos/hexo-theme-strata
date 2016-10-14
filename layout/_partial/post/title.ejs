@@ -1,0 +1,15 @@
+<% if (post.link){ %>
+  <h1 itemprop="name">
+    <a href="<%- url_for(post.link) %>" target="_blank" itemprop="url"><h1><%- post.title || theme.default_post_title || "Untitled" %></h1></a>
+  </h1>
+  <% } else if (post.title){ %>
+    <% if (is_archive()){ %>
+      <h1 itemprop="name">
+        <a href="<%- url_for(post.path) %>"><%= post.title %></a>
+      </h1>
+    <% } else { %>
+      <h1 itemprop="name">
+        <%= post.title %>
+      </h1>
+    <% } %>
+  <% } %>

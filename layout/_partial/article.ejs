@@ -1,0 +1,23 @@
+<%- partial('post/title') %>
+
+<%- partial('post/meta') %>
+
+<%- partial('post/category') %>
+
+<% if(post.cover_detail || theme.default_cover_detail) { %>
+    <div class="image main"><img src="<%- post.cover_detail || theme.default_cover_detail %>" alt="" /></div>
+<% } %>
+
+<!-- Gallery -->
+<%- partial('post/gallery') %>
+
+<!-- Content -->
+<%- post.content %>
+
+<!-- Tags -->
+<%- partial('post/tags') %>
+
+<!-- Comments -->
+<div>
+    <%- partial("post/comments.ejs") %>
+</div>

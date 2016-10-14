@@ -1,0 +1,26 @@
+  <!-- Scripts -->
+  <%- js('js/jquery.min.js') -%>">
+  <%- js('js/jquery.poptrox.min.js') -%>
+  <%- js('js/skel.min.js') -%>
+  <%- js('js/util.js') -%>
+
+  <!--[if lte IE 8]>
+  <%- js('js/ie/respond.min.js') %>
+  <![endif]-->
+
+  <%- js('js/main.js') -%>
+
+  <!-- Disqus Comments -->
+  <% if (is_post() && theme.comments && theme.comments.disqus_shortname){ %>
+  <script type="text/javascript">
+      var disqus_shortname = '<%= theme.comments.disqus_shortname %>';
+
+      (function(){
+          var dsq = document.createElement('script');
+          dsq.type = 'text/javascript';
+          dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/<% if (page.comments){ %>embed.js<% } else { %>count.js<% } %>';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      }());
+  </script>
+  <% } %>

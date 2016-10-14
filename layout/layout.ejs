@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<%- partial('_partial/head') %>
+
+<body id="top">
+
+    <!-- Header -->
+    <%- partial('_partial/header') %>
+
+    <!-- Main -->
+		<div id="main">
+
+      <!-- Main Content -->
+      <%- body %>
+
+      <!-- Three - the contact form is on every page! -->
+        <section id="three">
+          <%- partial('_partial/contact-form') -%>
+        </section>
+
+        <%- partial('_partial/footer.ejs') %>
+        
+    </div>
+
+    <!-- After footer scripts -->
+    <%- partial('_partial/after-footer') %>
+
+</body>
+</html>

@@ -1,0 +1,8 @@
+<%
+    var cssClass = ((index + 1) %2)? '6u' : '6u$';
+%>
+<article class="<%- cssClass -%> 12u$(xsmall) work-item">
+  <a href="<%- item.cover_detail || theme.default_cover_detail %>" class="image fit thumb" ><img src="<%- item.cover_index || theme.default_cover_index %>" title="<%- item.title -%>" alt=""  /></a>
+    <a href="<%- config.root %><%- item.path %>"><h3><%- item.title || theme.default_post_title || "Untitled" %></h3></a>
+  <p><%- item.subtitle || "" %></p>
+</article>

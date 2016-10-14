@@ -1,0 +1,34 @@
+  <!-- One -->
+  <section id="one">
+    <header class="major">
+      <% if(config.subtitle) { %>
+        <h2><%- config.subtitle %></h2>
+      <%} else {%>
+          <h2>Give your site a subtitle in your Hexo config file.</h2>
+      <%} %>
+    </header>
+    <% if(config.subtitle) { %>
+      <p><%- config.description %></p>
+    <%} else {%>
+      <p>Add a description to your Hexo config file and it will show here. Or if your would rather have blog layout here you could set style in the theme config file to 'blog'. The button below will go to the page set by about_page in theme config .</p>
+    <% }%>
+    <ul class="actions">
+      <li><a href="<%- url_for(theme.about_page) -%>" class="button">Learn More</a></li>
+    </ul>
+  </section>
+
+  <!-- Two -->
+  <section id="two">
+    <h2>Recent Work</h2>
+    <div class="row">
+      <% page.posts.forEach(function(item, index){ %>
+          <%- partial('_partial/article-index', {item: item, index: index}) %>
+      <% }); %>
+    </div>
+
+    <%- partial('_partial/pagination') %>
+
+    <ul class="actions">
+      <li><a href="<%- url_for('archives') -%>" class="button">Archives</a></li>
+    </ul>
+  </section>
