@@ -1,29 +1,24 @@
 # Strata Blog Hexo
 
-Hexo implementation of the free [HTML5Up Phantom Template](http://html5up.net/strata)
+Hexo implementation of the free [HTML5Up Strata Template](http://html5up.net/strata)
 
 ## Features Overview
 
 - Disqus and Facebook comments
 - Google Analytics
 - Cover image for posts and pages
-- Tags Support
+- Tags
+- Categories
 - Responsive Images
-- Image Gallery
 - Gravatar
-- Social Accounts configuration
+- Social Media links
 - Pagination
-
-## Not Supported
-
-- Post Categories will not be displayed
-- Posts and Pages Dates will not be displayed
 
 ## Installation
 
 ### SCSS support
 
-Phantom uses SCSS as a css preprocessor. SCSS is not supported by default in hexo, the `hexo-renderer-scss` is required.
+The `hexo-renderer-scss` is required.
 
 Install it by using:
 
@@ -38,7 +33,7 @@ Install the theme by using:
 $ git clone https://github.com/klugjo/hexo-theme-phantom themes/phantom
 ```
 
-Then update your blog's main `_config.yml` to set the theme to `phantom`:
+Then update your blog's main `_config.yml` to set the theme to `strata`:
 
 i.e:
 
@@ -51,7 +46,7 @@ theme: phantom
 
 ## Theme Configuration
 
-The theme's global configuration is done in `/themes/hexo-theme-phantom/_config.yml`.
+The theme's global configuration is done in `/themes/hexo-theme-strata/_config.yml`.
 
 ### Gravatar email
 
@@ -60,15 +55,6 @@ Set the email address for your Gravatar configured in the theme's `_config.yml`.
 ```
 # Gravatar email
 gravatar_email: a@123.com
-```
-
-### Default post title
-
-The default post title (used when no title is specified) is configured in the theme's `_config.yml`.
-
-```
-# Default post title
-default_post_title: Untitled
 ```
 
 ### Default index page cover image
@@ -91,7 +77,7 @@ default_cover_detail: "http://placehold.it/1300x500"
 
 ### Show Dates
 
-By default, Phantom does not show dates for posts and pages. You can set this config to true if you need to.
+By default, Strata does not show dates for posts and pages. You can set this config to true if you need to.
 
 ```
 # Show Dates for posts and pages
@@ -106,7 +92,7 @@ The comments provider is specified in the theme's `_config.yml`. If you specify 
 # Comments. Choose one by filling up the information
 comments:
   # Disqus comments
-  disqus_shortname: klugjotest
+  disqus_shortname: discussname
   # Facebook comments
   facebook:
     appid: 123456789012345
@@ -145,13 +131,6 @@ rss_url:
 
 For each post, you can specify additional information in the [front matter](https://hexo.io/docs/front-matter.html)
 
-### Post's Subtitle
-
-Use `subtitle` to specify the text that will be displayed below the title on the Home Page.
-
-```
-subtitle: Lorem Ipsum
-```
 
 ### Post's Index Thumbnail
 
@@ -173,8 +152,4 @@ cover_detail: /assets/hero_image.jpg
 
 ## Creator
 
-This theme was created by [HTML5 Up](http://html5up.net/phantom/) and adapted for Hexo by [Jonathan Klughertz](http://www.codeblocq.com/).
-
-## Bugs
-
-If you have a question, feature request or a bug you need me to fix, please [click here](https://github.com/klugjo/hexo-theme-phantom/issues/new) to file an issue.
+This theme was created by [HTML5 Up](http://html5up.net/strata/) and adapted for Hexo by [Tim Hyde](http://livingos.com/).
