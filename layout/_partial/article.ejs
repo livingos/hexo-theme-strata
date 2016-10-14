@@ -1,8 +1,6 @@
-<%- partial('post/title') %>
-
 <%- partial('post/meta') %>
 
-<%- partial('post/category') %>
+<%- partial('post/title') %>
 
 <% if(post.cover_detail || theme.default_cover_detail) { %>
     <div class="image main"><img src="<%- post.cover_detail || theme.default_cover_detail %>" alt="" /></div>

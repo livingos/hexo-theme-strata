@@ -1,5 +1,14 @@
-<% if(theme.show_dates) { %>
-    <div class="meta">
-        <%= post.date.format(config.date_format) %>
-    </div>
-<% } %>
+<div class="meta">
+  <% if(theme.show_dates) { %>
+      <span class="date">
+          <%= post.date.format(config.date_format) %>
+      </span>
+  <% } %>
+
+  <% if (post.categories && post.categories.length && theme.show_dates){ %>
+    <span class="meta-separator"> | </span>
+  <% } %>
+
+  <%- partial('category') %>
+
+</div>
