@@ -41,7 +41,7 @@ i.e:
 # Extensions
 ## Plugins: http://hexo.io/plugins/
 ## Themes: http://hexo.io/themes/
-theme: phantom
+theme: strata
 ```
 
 ## Theme Configuration
