@@ -1,4 +1,4 @@
-# Strata Blog Hexo
+# Strata Hexo Theme
 
 Hexo implementation of the free [HTML5Up Strata Template](http://html5up.net/strata)
 
