@@ -1,155 +1,73 @@
-# Strata Hexo Theme
+# Hexo Theme Unit Test
 
-Hexo implementation of the free [HTML5Up Strata Template](http://html5up.net/strata)
+This is a dummy Hexo site for theme unit test. You should test your theme before release.
 
-## Features Overview
+This test doesn't contain the default theme. You have to install the theme you want to test before starting.
 
-- Disqus and Facebook comments
-- Google Analytics
-- Cover image for posts and pages
-- Tags
-- Categories
-- Responsive Images
-- Gravatar
-- Social Media links
-- Pagination
+## Usage
 
-## Installation
+1. Clone this repository
 
-### SCSS support
+    ``` bash
+    $ git clone https://github.com/hexojs/hexo-theme-unit-test.git
+    ```
 
-The `hexo-renderer-scss` is required.
+2. Install your own theme and modify `theme` setting in `_config.yml`.
+3. Run server and start testing. Make sure all styles  are displayed properly.
+4. Once test is done, you can [submit your theme](https://hexo.io/docs/themes.html#Publishing)!
 
-Install it by using:
+## Checklist
 
-```
-$ npm install --save hexo-renderer-scss
-```
-### Install the theme
+### `<head>`
 
-Install the theme by using:
+- Use the proper [DOCTYPE](https://en.wikipedia.org/wiki/Document_Type_Declaration).  
+  If you don't know which doctype you should use, `<!DOCTYPE html>` is recommended.
+- UTF8 charset
 
-```
-$ git clone https://github.com/klugjo/hexo-theme-phantom themes/phantom
-```
+    ``` html
+    <meta charset="utf-8">
+    ```
 
-Then update your blog's main `_config.yml` to set the theme to `strata`:
+- Proper titles for different pages
+- RSS support
 
-i.e:
+    ``` html
+    <link rel="alternate" href="path/of/rss" type="application/atom+xml">
+    ```
 
-```
-# Extensions
-## Plugins: http://hexo.io/plugins/
-## Themes: http://hexo.io/themes/
-theme: strata
-```
+- Favicon support
 
-## Theme Configuration
+    ``` html
+    <link rel="icon" href="path/of/favicon">
+    ```
 
-The theme's global configuration is done in `/themes/hexo-theme-strata/_config.yml`.
+### Index
 
-### Gravatar email
+- Only display excerpts. (Better with a "Read More" link)
+- [Pagination](http://zespia.tw/hexo/docs/pagination.html) (broken link)
 
-Set the email address for your Gravatar configured in the theme's `_config.yml`.
+### Post
 
-```
-# Gravatar email
-gravatar_email: a@123.com
-```
+- Display post categories and tags.
+- Disqus comment support.
+- Display the post date.
+- Support `photo` and `link` layout.
+- Posts without title should be accessible.
 
-### Default index page cover image
+### Performance
 
-You can specify a default thumbnail for posts on the index page (Home page). This image will be used if you forget to specify an image in the post's front matter.
+- Use [fragment_cache](https://hexo.io/docs/helpers.html#fragment_cache)  
+  It caches render result across post/pages, see [#1769](https://github.com/hexojs/hexo/issues/1769) for the impact
 
-```
-# Default post cover index page
-default_cover_index: "http://placehold.it/450x450"
-```
+### Optional
 
-### Default post page cover image
+- Responsive design
+- i18n
+- Post share
+- SEO
 
-You can specify a default thumbnail for posts/pages on the post/page page (Detail Page). This image will be used if you forget to specify an image in the post's front matter. If you don't specify a default and you don't specify an image in your post, no image will be displayed
+## Resources
 
-```
-# Default post cover index page
-default_cover_detail: "http://placehold.it/1300x500"
-```
-
-### Show Dates
-
-By default, Strata does not show dates for posts and pages. You can set this config to true if you need to.
-
-```
-# Show Dates for posts and pages
-show_dates:
-```
-
-### Comments
-
-The comments provider is specified in the theme's `_config.yml`. If you specify both a `disqus_shortname` and a `facebook.appid` there will be 2 sets of comment per post. So choose one.
-
-```
-# Comments. Choose one by filling up the information
-comments:
-  # Disqus comments
-  disqus_shortname: discussname
-  # Facebook comments
-  facebook:
-    appid: 123456789012345
-    comment_count: 5
-    comment_colorscheme: light
-```
-
-### Google Analytics
-
-The Google Analytics Tracking ID is configured in the theme's `_config.yml`.
-
-```
-# Google Analytics Tracking ID
-google_analytics:
-```
-
-### Social Account
-
-Setup the links to your social pages in the theme's `_config.yml`. Links are in the footer.
-
-```
-# Social Accounts
-twitter_url:
-facebook_url: https://www.facebook.com/
-instagram_url:
-dribble_url: https://dribbble.com/pixelhint
-github_url:
-googleplus_url: https://plus.google.com/+Pixelhint/posts
-behance_url: https://www.behance.net/
-fivehundredpx_url:
-email_url:
-rss_url:
-```
-
-## Post Custom Configuration
-
-For each post, you can specify additional information in the [front matter](https://hexo.io/docs/front-matter.html)
-
-
-### Post's Index Thumbnail
-
-Use `cover_index` to specify an image that will be used for that post on the Home page (also knows as index)
-
-Example:
-
-```
-cover_index: /assets/work1.jpg
-```
-
-### Post's Detail Thumbnail
-
-Use `cover_detail` to specify an image that will be used for that post on the Detail page for that post.
-
-```
-cover_detail: /assets/hero_image.jpg
-```
-
-## Creator
-
-This theme was created by [HTML5 Up](http://html5up.net/strata/) and adapted for Hexo by [Tim Hyde](http://livingos.com/).
+- [Theme](https://hexo.io/docs/themes.html)
+- [Variables](https://hexo.io/docs/variables.html)
+- [Helpers](https://hexo.io/docs/helpers.html)
