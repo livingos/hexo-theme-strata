@@ -1,5 +1,5 @@
 @import url("font-awesome.min.css");
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic");
+@import url("//fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic");
 /*
 	Strata by HTML5 UP
 	html5up.net | @ajlkn
@@ -2284,7 +2284,7 @@ body.is-touch .poptrox-popup .closer {
 /* Pagination */
 .pagination-container {
   text-align: center;
-  margin-top: 100px; }
+  margin-top: 0; }
   .pagination-container .pagination {
     display: inline-block; }
     .pagination-container .pagination a {
