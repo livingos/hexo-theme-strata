@@ -4,7 +4,7 @@
           <% post.photos.forEach(function(photo){ %>
               <div class="picture-container">
                   <a href="#" data-featherlight="<%- config.root %><%- photo %>">
-                      <img src="<%- photo %>" class="img-thumbnail" />
+                      <img src="<%- config.root %><%- photo %>" class="img-thumbnail" />
                   </a>
               </div>
           <% }); %>
