@@ -3,8 +3,8 @@
       <% if (post.photos.length){ %>
           <% post.photos.forEach(function(photo){ %>
               <div class="picture-container">
-                  <a href="#" data-featherlight="<%- config.root %><%- photo %>">
-                      <img src="<%- config.root %><%- photo %>" class="img-thumbnail" />
+                  <a href="#" data-featherlight="<%- url_for(photo) %>">
+                      <img src="<%- url_for(photo) %>" class="img-thumbnail" />
                   </a>
               </div>
           <% }); %>
