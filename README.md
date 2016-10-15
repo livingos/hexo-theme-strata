@@ -30,7 +30,7 @@ $ npm install --save hexo-renderer-scss
 Install the theme by using:
 
 ```
-$ git clone https://github.com/klugjo/hexo-theme-phantom themes/phantom
+$ git clone https://github.com/livingos/hexo-theme-strata themes/strata
 ```
 
 Then update your blog's main `_config.yml` to set the theme to `strata`:
